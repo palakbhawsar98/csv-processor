@@ -9,6 +9,7 @@
 
 ## Architecture Diagrams
 
+![Architecture Diagram](serverless.png)
 
 
 ## Prerequisites
@@ -26,7 +27,7 @@ Before setting up locally make sure you have:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-GITHUB-USERNAME/csv-processor.git
+git clone https://github.com/palakbhawsar98/csv-processor.git
 cd csv-processor
 ```
 
@@ -38,14 +39,8 @@ python -m venv .venv
 
 ### 3. Activate the virtual environment
 
-**Windows:**
 ```bash
 .venv\Scripts\activate
-```
-
-**Mac / Linux:**
-```bash
-source .venv/bin/activate
 ```
 
 You should see `(.venv)` appear at the start of your terminal line.
@@ -82,7 +77,7 @@ To get your storage connection string:
 
 ## Deploy to Azure from VS Code
 
-### Option 1 — Using the Command Palette
+### Using the Command Palette
 
 1. Open VS Code
 2. Press `Ctrl + Shift + P`
@@ -90,14 +85,6 @@ To get your storage connection string:
 4. Select your subscription
 5. Select `func-csv-processor`
 6. Click **Deploy** on the confirmation dialog
-
-### Option 2 — Using the Azure sidebar
-
-1. Click the **Azure icon** in the left sidebar
-2. Expand your subscription
-3. Expand **Function App**
-4. Right click `func-csv-processor`
-5. Click **Deploy to Function App**
 
 > Deployment takes 1-2 minutes. You will see a progress notification in the bottom right corner of VS Code.
 
@@ -149,22 +136,6 @@ Done — written to processed-uploads/test_20260315_154724_cleaned.csv
 
 ---
 
-## Key Vault Secret
-
-The function reads the storage connection string securely from Key Vault at runtime using Managed Identity. The secret name is:
-
-```
-stcsvprocessor01-connection-string
-```
-
-To add or update it:
-1. Go to `kv-csvprocessor-01` → **Secrets** → **+ Generate/Import**
-2. Name: `stcsvprocessor01-connection-string`
-3. Value: paste your storage connection string
-4. Click **Create**
-
----
-
 ## Monitoring
 
 All function runs are logged to App Insights. To query logs:
@@ -189,8 +160,4 @@ traces
 | Extra whitespace in cells | Stripped |
 | Non-CSV files | Ignored with a warning log |
 
----
 
-👉 [YOUR-BLOG-URL-HERE](https://YOUR-BLOG-URL-HERE)
-
----
