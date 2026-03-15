@@ -2,7 +2,7 @@
 
 > Automatically clean CSV files using Azure Functions, Event Grid, Key Vault and App Insights. Drop a messy CSV into storage and get a clean version back within seconds, no manual work needed.
 
-**Full step-by-step Azure Portal setup guide:** [Read the blog post](https://YOUR-BLOG-URL-HERE)
+**Full step-by-step Azure Portal setup guide:** [Read the blog post]([https://YOUR-BLOG-URL-HERE](https://palak-bhawsar.hashnode.dev/build-a-serverless-csv-cleaning-pipeline-with-azure-functions))
 
 ---
 
