@@ -12,11 +12,10 @@
 
 Before setting up locally make sure you have:
 
-- [Python 3.11](https://www.python.org/downloads/release/python-3118/)
-- [VS Code](https://code.visualstudio.com) with the [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
-- [Azure Functions Core Tools v4](https://github.com/Azure/azure-functions-core-tools/releases/latest) download the zip file, no admin needed
+- Python 3.11
+- VS Code with the Azure Functions extension
+- Azure Functions Core Tools
 - An Azure account with the resources listed above already created
----
 
 ## Local Environment Setup
 
@@ -69,7 +68,6 @@ To get your storage connection string:
 
 > `local.settings.json` is already in `.gitignore` — it will never be pushed to GitHub
 
----
 
 ## Deploy to Azure from VS Code
 
@@ -84,7 +82,6 @@ To get your storage connection string:
 
 > Deployment takes 1-2 minutes. You will see a progress notification in the bottom right corner of VS Code.
 
----
 
 ## Testing the Pipeline
 
@@ -130,7 +127,6 @@ File: test.csv | Total: 5 | Cleaned: 3 | Skipped: 2
 Done — written to processed-uploads/test_20260315_154724_cleaned.csv
 ```
 
----
 
 ## Monitoring
 
@@ -145,7 +141,6 @@ traces
 | take 20
 ```
 
----
 
 ## What the cleaning does
 
